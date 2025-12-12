@@ -42,24 +42,24 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <div className="bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
                 <Mail className="text-white" size={24} />
               </div>
               <h3 className="text-white mb-2">Email Us</h3>
               <p className="text-gray-400">hello@brandsync.com</p>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <div className="bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
                 <Phone className="text-white" size={24} />
               </div>
               <h3 className="text-white mb-2">Call Us</h3>
               <p className="text-gray-400">+1 (555) 123-4567</p>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <div className="bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
                 <MapPin className="text-white" size={24} />
               </div>
               <h3 className="text-white mb-2">Visit Us</h3>
@@ -73,7 +73,7 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <form
               onSubmit={handleSubmit}
-              className="bg-gradient-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-8"
+              className="bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 rounded-2xl p-8"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -139,7 +139,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2"
+                className="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2"
               >
                 Send Message <Send size={20} />
               </button>

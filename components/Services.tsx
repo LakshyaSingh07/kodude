@@ -42,9 +42,9 @@ export default function Services() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-gray-900/80 to-gray-800/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition-all group"
+              className="bg-linear-to-br from-gray-900/80 to-gray-800/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition-all group"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 bg-linear-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <service.icon className="text-white" size={28} />
               </div>
               <h3 className="text-xl text-white mb-3">{service.title}</h3>

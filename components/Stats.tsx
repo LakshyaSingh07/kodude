@@ -25,9 +25,9 @@ export default function Stats() {
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
+              className="bg-linear-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
             >
-              <div className={`text-4xl md:text-5xl bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+              <div className={`text-4xl md:text-5xl bg-linear-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                 {stat.value}
               </div>
               <div className="text-gray-400">{stat.label}</div>

@@ -70,8 +70,8 @@ export default function Pricing() {
               key={index}
               className={`rounded-2xl p-8 transition-all ${
                 plan.highlighted 
-                  ? 'bg-gradient-to-br from-blue-600 to-purple-600 scale-105 md:scale-110 shadow-2xl shadow-blue-500/20' 
-                  : 'bg-gradient-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 hover:border-gray-700'
+                  ? 'bg-linear-to-br from-blue-600 to-purple-600 scale-105 md:scale-110 shadow-2xl shadow-blue-500/20' 
+                  : 'bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 hover:border-gray-700'
               }`}
             >
               {plan.highlighted && (

@@ -58,14 +58,14 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl aspect-4/3 cursor-pointer"
             >
               <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-60 group-hover:opacity-80 transition-opacity`}></div>
+              <div className={`absolute inset-0 bg-linear-to-t ${project.gradient} opacity-60 group-hover:opacity-80 transition-opacity`}></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
                 <span className="text-white/90 text-sm mb-2">{project.category}</span>
                 <h3 className="text-white text-xl mb-2">{project.title}</h3>

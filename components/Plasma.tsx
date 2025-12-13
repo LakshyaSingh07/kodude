@@ -116,7 +116,8 @@ export const Plasma: React.FC<PlasmaProps> = ({
       webgl: 2,
       alpha: true,
       antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2),
+      dpr: Math.min(window.devicePixelRatio || 1, 1.5), // lower DPR for smoother perf
+      powerPreference: "high-performance",
     });
     const gl = renderer.gl;
     const canvas = gl.canvas as HTMLCanvasElement;
@@ -174,6 +175,15 @@ export const Plasma: React.FC<PlasmaProps> = ({
     ro.observe(containerRef.current);
     setSize();
 
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isVisible = entries.some((e) => e.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(containerRef.current);
+
     let raf = 0;
     const t0 = performance.now();
     const loop = (t: number) => {
@@ -192,13 +202,16 @@ export const Plasma: React.FC<PlasmaProps> = ({
       } else {
         (program.uniforms.iTime as any).value = timeValue;
       }
-      renderer.render({ scene: mesh });
+      if (isVisible) {
+        renderer.render({ scene: mesh });
+      }
       raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
 
     return () => {
       cancelAnimationFrame(raf);
+      observer.disconnect();
       ro.disconnect();
       if (mouseInteractive && containerRef.current) {
         containerRef.current.removeEventListener("mousemove", handleMouseMove);

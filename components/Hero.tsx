@@ -31,7 +31,7 @@ export default function Hero() {
 
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight">
-              Creativity Meets Functionality
+              Where Ideas Become <br/> Digital Reality.
             </h1>
             <p className="text-gray-200/80 text-lg md:text-xl max-w-3xl mx-auto">
               Transform your ideas into stunning digital experiences. We combine

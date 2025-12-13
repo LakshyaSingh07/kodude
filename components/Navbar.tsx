@@ -16,6 +16,12 @@ export default function Navbar() {
         <a href="#services" className="hover:text-white transition-colors">
           Services
         </a>
+        <a href="#work" className="hover:text-white transition-colors">
+          Work
+        </a>
+        <a href="#testimonials" className="hover:text-white transition-colors">
+          Testimonials
+        </a>
         <a href="#contact" className="hover:text-white transition-colors">
           Contact
         </a>

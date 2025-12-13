@@ -30,7 +30,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="px-6 md:px-12 py-20 relative">
+    <div className="px-6 md:px-12 py-20 relative " id="testimonials">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-blue-500 text-sm uppercase tracking-wider">

@@ -52,11 +52,11 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="px-6 md:px-12 py-20">
-      <div className="max-w-7xl mx-auto">
+    <div className="px-6 md:px-12 py-16">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-blue-500 text-sm uppercase tracking-wider">Pricing</span>
-          <h2 className="text-3xl md:text-5xl text-white mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-3">
             Choose Your Plan
           </h2>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
@@ -64,14 +64,14 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`rounded-2xl p-8 transition-all ${
+              className={`rounded-xl p-5 lg:p-6 transition-all flex flex-col ${
                 plan.highlighted 
-                  ? 'bg-linear-to-br from-blue-600 to-purple-600 scale-105 md:scale-110 shadow-2xl shadow-blue-500/20' 
-                  : 'bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 hover:border-gray-700'
+                  ? 'bg-linear-to-br from-blue-600 to-purple-600 md:scale-[1.02] shadow-lg shadow-blue-500/15 ring-1 ring-white/12 hover:shadow-[0_0_32px_rgba(59,130,246,0.35)] hover:ring-2 hover:ring-blue-200/40' 
+                  : 'bg-linear-to-br from-gray-900/80 to-gray-800/40 border border-gray-800 hover:shadow-[0_0_28px_rgba(59,130,246,0.28)] hover:ring-1 hover:ring-blue-400/25'
               }`}
             >
               {plan.highlighted && (
@@ -81,22 +81,15 @@ export default function Pricing() {
                   </span>
                 </div>
               )}
-              <h3 className="text-2xl text-white mb-2">{plan.name}</h3>
-              <p className={`text-sm mb-6 ${plan.highlighted ? 'text-white/80' : 'text-gray-400'}`}>
+              <h3 className="text-lg lg:text-xl text-white mb-2">{plan.name}</h3>
+              <p className={`text-sm mb-4 ${plan.highlighted ? 'text-white/80' : 'text-gray-400'}`}>
                 {plan.description}
               </p>
-              <div className="mb-6">
-                <span className="text-5xl text-white">${plan.price}</span>
-                <span className={`${plan.highlighted ? 'text-white/80' : 'text-gray-400'}`}>/project</span>
+              <div className="mb-4 flex items-baseline gap-2">
+                <span className="text-3xl lg:text-4xl text-white">${plan.price}</span>
+                <span className={`${plan.highlighted ? 'text-white/80' : 'text-gray-400'} text-xs lg:text-sm`}>/project</span>
               </div>
-              <button className={`w-full py-3 rounded-lg mb-8 transition-colors ${
-                plan.highlighted 
-                  ? 'bg-white text-blue-600 hover:bg-gray-100' 
-                  : 'bg-blue-600 text-white hover:bg-blue-700'
-              }`}>
-                Get Started
-              </button>
-              <div className="space-y-4">
+              <div className="space-y-2.5 text-sm">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <Check className={plan.highlighted ? 'text-white' : 'text-blue-500'} size={20} />
@@ -104,6 +97,13 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
+              <button className={`w-full py-2 rounded-lg mt-5 transition-colors text-sm font-medium ${
+                plan.highlighted 
+                  ? 'bg-white text-blue-600 hover:bg-gray-100' 
+                  : 'bg-blue-600 text-white hover:bg-blue-700'
+              }`}>
+                Get Started
+              </button>
             </div>
           ))}
         </div>

@@ -9,7 +9,7 @@ export default function Stats() {
   ];
 
   return (
-    <div className="px-6 md:px-12 py-20 relative">
+    <div className="px-6 md:px-12 py-20 relative" id='about'>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-blue-500 text-sm uppercase tracking-wider">Our Impact</span>

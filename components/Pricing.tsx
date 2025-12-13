@@ -5,7 +5,7 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Starter',
-      price: '999',
+      price: '5,999',
       description: 'Perfect for small businesses and startups',
       features: [
         'Responsive Design',
@@ -19,7 +19,7 @@ export default function Pricing() {
     },
     {
       name: 'Professional',
-      price: '2,499',
+      price: '15,999',
       description: 'Ideal for growing businesses',
       features: [
         'Everything in Starter',
@@ -35,7 +35,7 @@ export default function Pricing() {
     },
     {
       name: 'Enterprise',
-      price: '4,999',
+      price: 'Custom',
       description: 'For large-scale projects',
       features: [
         'Everything in Professional',
@@ -81,12 +81,12 @@ export default function Pricing() {
                   </span>
                 </div>
               )}
-              <h3 className="text-lg lg:text-xl text-white mb-2">{plan.name}</h3>
+              <h3 className="text-lg lg:text-xl font-bold text-white mb-2">{plan.name}</h3>
               <p className={`text-sm mb-4 ${plan.highlighted ? 'text-white/80' : 'text-gray-400'}`}>
                 {plan.description}
               </p>
               <div className="mb-4 flex items-baseline gap-2">
-                <span className="text-3xl lg:text-4xl text-white">${plan.price}</span>
+                <span className="text-3xl font-bold lg:text-4xl text-white">₹{plan.price}</span>
                 <span className={`${plan.highlighted ? 'text-white/80' : 'text-gray-400'} text-xs lg:text-sm`}>/project</span>
               </div>
               <div className="space-y-2.5 text-sm">

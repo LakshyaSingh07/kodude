@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
 
       {/* Centered content */}
-      <div className="relative z-10 w-full px-6 md:px-10 lg:px-14">
+      <div className="relative z-10 w-full px-6 md:px-10 lg:px-14" id="hero">
         <div className="mx-auto max-w-5xl text-center px-8 py-12 md:px-12 md:py-16 flex flex-col items-center gap-6">
           <div className="inline-flex items-center justify-center p-4 shadow-inner">
             <img

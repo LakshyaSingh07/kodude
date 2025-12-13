@@ -7,12 +7,10 @@ import Testimonials from '../components/Testimonial';
 import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Navbar from '@/components/Navbar';
 
 export default function App() {
   return (
-    <div className="bg-[#0a0a0f] min-h-screen">
-      <Navbar />
+    <div className="bg-[#05070f] min-h-screen text-white">
       <Hero />
       <Stats />
       <Services />

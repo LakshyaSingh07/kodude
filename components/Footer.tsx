@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
-              <span className="text-white">BrandSync</span>
+              <span className="text-white">KoDude</span>
             </div>
             <p className="text-gray-400 mb-4">
               Creating exceptional digital experiences that drive results.
@@ -54,36 +55,37 @@ export default function Footer() {
             <h3 className="text-white mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
+                
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/careers"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/blog"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/press"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Press
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -93,36 +95,36 @@ export default function Footer() {
             <h3 className="text-white mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Web Development
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   UI/UX Design
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Mobile Apps
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Consulting
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -132,36 +134,36 @@ export default function Footer() {
             <h3 className="text-white mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Help Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

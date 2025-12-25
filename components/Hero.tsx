@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
-import FloatingLines from "./FloatingLines";
+import Iridescence from "./Iridescence";
 
 const links = [
   { href: "/", label: "Home" },
@@ -22,15 +22,13 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden text-white">
-      <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <FloatingLines
-          enabledWaves={["top", "middle", "bottom"]}
-          lineCount={[10, 15, 20]}
-          lineDistance={[8, 6, 4]}
-          bendRadius={5}
-          bendStrength={-0.5}
-          interactive
-          parallax
+      <div className="absolute inset-0 pointer-events-none opacity-80">
+        <Iridescence
+          color={[0.5, 0.6, 0.8]}
+          mouseReact={false}
+          amplitude={0.1}
+          speed={0.5}
+          className="h-full w-full"
         />
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#05070f] via-[#05070f]/90 to-transparent" />
@@ -72,7 +70,7 @@ export default function Hero() {
       {/* Centered content */}
       <div className="relative z-10 w-full px-6 md:px-10 lg:px-14">
         <div className="flex items-center justify-center min-h-screen" id="hero">
-          <div className="mx-auto max-w-5xl text-center px-8 py-12 md:px-12 md:py-16 flex flex-col items-center gap-6">
+          <div className="mx-auto max-w-5xl text-center px-8 py-12 md:px-12 md:py-16 flex flex-col items-center gap-6 -translate-y-6 md:-translate-y-10">
             <div className="inline-flex items-center justify-center p-4 shadow-inner">
               <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg"

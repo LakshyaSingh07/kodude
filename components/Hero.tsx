@@ -28,7 +28,7 @@ export default function Hero() {
           mouseReact={false}
           amplitude={0.1}
           speed={0.5}
-          className="h-full w-full"
+          // className="h-full w-full"
         />
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#05070f] via-[#05070f]/90 to-transparent" />

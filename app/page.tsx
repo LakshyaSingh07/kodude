@@ -7,18 +7,21 @@ import Testimonials from '../components/Testimonial';
 import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import PreloaderGate from '../components/PreloaderGate';
 
 export default function App() {
   return (
-    <div className="bg-[#05070f] min-h-screen text-white">
-      <Hero />
-      <Stats />
-      <Services />
-      <Projects />
-      <Testimonials />
-      <Pricing />
-      <Contact />
-      <Footer />
-    </div>
+    <PreloaderGate>
+      <div className="bg-[#05070f] min-h-screen text-white">
+        <Hero />
+        <Stats />
+        <Services />
+        <Projects />
+        <Testimonials />
+        <Pricing />
+        <Contact />
+        <Footer />
+      </div>
+    </PreloaderGate>
   );
 }
